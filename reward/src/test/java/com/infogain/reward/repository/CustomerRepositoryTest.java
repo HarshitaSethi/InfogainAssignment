@@ -18,10 +18,10 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @author harshita.sethi
  */
 @SpringBootTest
-public class CustomerRespositoryTest {
+public class CustomerRepositoryTest {
 
     @Autowired
-    private CustomerRespository customerRespository;
+    private CustomerRepository customerRespository;
     private Customer mockCustomer;
 
     @BeforeEach

@@ -5,10 +5,10 @@
 package com.infogain.reward.service;
 
 import com.infogain.reward.model.Customer;
-import com.infogain.reward.repository.CustomerRespository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.infogain.reward.repository.CustomerRepository;
 
 /**
  *
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
 
     @Autowired
-    private CustomerRespository customerRespository;
+    private CustomerRepository customerRespository;
 
     public Customer insertCustomer(Customer customer) {
         return customerRespository.saveAndFlush(customer);

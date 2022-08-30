@@ -26,7 +26,6 @@ public class RewardService {
     private RewardRepository rewardRepository;
 
     public Reward insertReward(CustomerTransaction transaction) {
-//    public void insertReward(Reward rewards) {
         Reward reward = null;
         int rewardPoints = calculateReward(transaction.getTransactionAmount());
         if (rewardPoints > 0) {
@@ -35,7 +34,6 @@ public class RewardService {
             reward.setTransactionDate(transaction.getTransactionDate());
 
             reward.setMonth(getMonth(reward.getTransactionDate()));
-//            reward.setMonth(reward.getTransactionDate().getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH ));
             reward.setRewardPoints(rewardPoints);
 
             rewardRepository.save(reward);

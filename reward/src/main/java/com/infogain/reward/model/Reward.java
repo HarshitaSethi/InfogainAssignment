@@ -27,8 +27,6 @@ public class Reward {
     private Long customerId;
 
     @Temporal(TemporalType.DATE)
-//    @JsonFormat(pattern = "dd-MM-yyyy", timezone = "Asia/Kolkata")
-//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date transactionDate;
     
     private String month;

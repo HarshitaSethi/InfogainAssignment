@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Tue Aug 23 18:13:12 IST 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0182-caba-6384-0000050ba168 
-on database directory C:\Users\harshita.sethi\Downloads\reward\reward\derbyCustomerReward with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Tue Aug 30 13:17:59 IST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0182-edb8-92af-000009e67db8 
+on database directory C:\Users\harshita.sethi\Downloads\reward\reward\derbyCustomerReward with class loader sun.misc.Launcher$AppClassLoader@42a57993 
 Loaded from file:/C:/Users/harshita.sethi/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_202-b08
@@ -11,3 +11,9 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Aug 30 13:18:50 IST 2022: Shutting down Derby engine
+----------------------------------------------------------------
+Tue Aug 30 13:18:50 IST 2022:
+Shutting down instance a816c00e-0182-edb8-92af-000009e67db8 on database directory C:\Users\harshita.sethi\Downloads\reward\reward\derbyCustomerReward with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+----------------------------------------------------------------

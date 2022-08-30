@@ -51,18 +51,4 @@ public class TransactionController {
         }
         return ResponseEntity.status(HttpStatus.CREATED).body("Transaction added");
     }
-
-//    @PostMapping
-//    @RequestMapping("/bulkInsert")
-//    public ResponseEntity<String> addBulkTransaction(@RequestBody final List<CustomerTransaction> transactions) {
-//        try {
-//            for (CustomerTransaction transaction : transactions) {
-//                transactionService.insertTransaction(transaction);
-//            }
-//        } catch (Exception ex) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to insert a new transaction due to " + ex);
-//        }
-//        return ResponseEntity.status(HttpStatus.CREATED).body("Transactions added");
-//    }
-
 }

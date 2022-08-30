@@ -5,7 +5,6 @@
 package com.infogain.reward.service;
 
 import com.infogain.reward.model.Customer;
-import com.infogain.reward.repository.CustomerRespository;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import com.infogain.reward.repository.CustomerRepository;
 
 /**
  *
@@ -29,7 +29,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 public class CustomerServiceTest {
 
     @MockBean
-    private CustomerRespository customerRespository;
+    private CustomerRepository customerRespository;
 
     @Autowired
     private CustomerService customerService;

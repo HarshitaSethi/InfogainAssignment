@@ -10,18 +10,18 @@ package com.infogain.reward.model;
  */
 public class RewardPerCustomer {
 
-    private Long customeId;
+    private Long customerId;
     private String month;
     private Long rewardPoints;
 
-    public RewardPerCustomer(Long customeId, String month, Long rewardPoints) {
-        this.customeId = customeId;
+    public RewardPerCustomer(Long customerId, String month, Long rewardPoints) {
+        this.customerId = customerId;
         this.month = month;
         this.rewardPoints = rewardPoints;
     }
 
-    public RewardPerCustomer(Long customeId, Long rewardPoints) {
-        this.customeId = customeId;
+    public RewardPerCustomer(Long customerId, Long rewardPoints) {
+        this.customerId = customerId;
         this.rewardPoints = rewardPoints;
     }
 
@@ -29,11 +29,11 @@ public class RewardPerCustomer {
     }
 
     public Long getCustomeId() {
-        return customeId;
+        return customerId;
     }
 
-    public void setCustomeId(Long customeId) {
-        this.customeId = customeId;
+    public void setCustomeId(Long customerId) {
+        this.customerId = customerId;
     }
 
     public String getMonth() {
