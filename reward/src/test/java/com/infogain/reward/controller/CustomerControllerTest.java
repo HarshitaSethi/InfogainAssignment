@@ -6,7 +6,7 @@ package com.infogain.reward.controller;
 
 import com.infogain.reward.model.Customer;
 import com.infogain.reward.service.CustomerService;
-import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -53,7 +53,7 @@ public class CustomerControllerTest {
      */
     @Test
     public void testGetAllCustomers() throws Exception {
-        Mockito.when(customerService.getAllCustomers()).thenReturn(Arrays.asList(mockCustomer));
+        Mockito.when(customerService.getAllCustomers()).thenReturn(List.of(mockCustomer));
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
                 "/customer").accept(
                         MediaType.APPLICATION_JSON);

@@ -26,7 +26,6 @@ public class CustomerTransaction {
     private Long customerId;
 
     @Temporal(TemporalType.DATE)
-//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = dateFormat)
     private Date transactionDate;
 
     private double transactionAmount;

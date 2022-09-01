@@ -80,7 +80,7 @@ public class RewardServiceTest {
     @Test
     public void testGetAllRewards() {
         Mockito.when(rewardRepository.findAll())
-                .thenReturn(Arrays.asList(mockReward));
+                .thenReturn(List.of(mockReward));
 
         List<Reward> rewards = rewardService.getAllRewards();
         assertTrue(rewards.size() > 0);
@@ -92,7 +92,7 @@ public class RewardServiceTest {
     @Test
     public void testGetAllRewardsByCustomer() {
         Mockito.when(rewardRepository.findByCustomerId(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(mockReward));
+                .thenReturn(List.of(mockReward));
 
         List<Reward> rewards = rewardService.getAllRewardsByCustomer(1L);
         assertTrue(rewards.size() > 0);
@@ -104,7 +104,7 @@ public class RewardServiceTest {
     @Test
     public void testGetRewardsPerMonth() {
         Mockito.when(rewardRepository.getRewardsPerMonth())
-                .thenReturn(Arrays.asList(mockRewardPerCustomer));
+                .thenReturn(List.of(mockRewardPerCustomer));
 
         List<RewardPerCustomer> rewardsPerMonth = rewardService.getRewardsPerMonth();
         assertTrue(rewardsPerMonth.size() > 0);
@@ -116,7 +116,7 @@ public class RewardServiceTest {
     @Test
     public void testGetRewardsPerMonthByCustomer() {
         Mockito.when(rewardRepository.getRewardsPerMonthByCustomer(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(mockRewardPerCustomer));
+                .thenReturn(List.of(mockRewardPerCustomer));
 
         List<RewardPerCustomer> rewardsPerMonthByCustomers = rewardService.getRewardsPerMonthByCustomer(1L);
         assertTrue(rewardsPerMonthByCustomers.size() > 0);
@@ -128,7 +128,7 @@ public class RewardServiceTest {
     @Test
     public void testGetTotalRewards() {
         Mockito.when(rewardRepository.getTotalRewards())
-                .thenReturn(Arrays.asList(mockRewardPerCustomerTotal));
+                .thenReturn(List.of(mockRewardPerCustomerTotal));
 
         List<RewardPerCustomer> totalRewards = rewardService.getTotalRewards();
         assertTrue(totalRewards.size() > 0);
@@ -140,7 +140,7 @@ public class RewardServiceTest {
     @Test
     public void testGetTotalRewardsByCustomer() {
         Mockito.when(rewardRepository.getTotalRewardsByCustomer(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(mockRewardPerCustomerTotal));
+                .thenReturn(List.of(mockRewardPerCustomerTotal));
 
         List<RewardPerCustomer> totalRewardsByCustomer = rewardService.getTotalRewardsByCustomer(1L);
         assertTrue(totalRewardsByCustomer.size() > 0);

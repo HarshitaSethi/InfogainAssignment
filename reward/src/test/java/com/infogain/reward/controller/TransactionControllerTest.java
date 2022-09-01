@@ -8,8 +8,7 @@ import com.infogain.reward.model.CustomerTransaction;
 import com.infogain.reward.service.TransactionService;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -59,7 +58,7 @@ public class TransactionControllerTest {
     @Test
     public void testGetAllTransactions() throws Exception {
         Mockito.when(transactionService.getAllTransactions())
-                .thenReturn(Arrays.asList(mockCustomerTransaction));
+                .thenReturn(List.of(mockCustomerTransaction));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/transaction").accept(MediaType.APPLICATION_JSON);
         
@@ -78,7 +77,7 @@ public class TransactionControllerTest {
     @Test
     public void testGetAllTransactionsByCustomer() throws Exception {
         Mockito.when(transactionService.getAllTransactionsForCustomer(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(mockCustomerTransaction));
+                .thenReturn(List.of(mockCustomerTransaction));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/transaction/1").accept(MediaType.APPLICATION_JSON);
         

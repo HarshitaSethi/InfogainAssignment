@@ -9,8 +9,7 @@ import com.infogain.reward.model.RewardPerCustomer;
 import com.infogain.reward.service.RewardService;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -60,7 +59,7 @@ public class RewardControllerTest {
     @Test
     public void testGetAllRewards() throws Exception {
         Mockito.when(rewardService.getAllRewards())
-                .thenReturn(Arrays.asList(reward));
+                .thenReturn(List.of(reward));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/reward").accept(MediaType.APPLICATION_JSON);
 
@@ -78,7 +77,7 @@ public class RewardControllerTest {
     @Test
     public void testGetAllRewardsByCustomer() throws Exception {
         Mockito.when(rewardService.getAllRewardsByCustomer(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(reward));
+                .thenReturn(List.of(reward));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/reward/1").accept(MediaType.APPLICATION_JSON);
 
@@ -97,7 +96,7 @@ public class RewardControllerTest {
     @Test
     public void testGetRewardPerMonth() throws Exception {
         Mockito.when(rewardService.getRewardsPerMonth())
-                .thenReturn(Arrays.asList(rewardPerCustomer));
+                .thenReturn(List.of(rewardPerCustomer));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/reward/rewardPerMonth").accept(MediaType.APPLICATION_JSON);
 
@@ -116,7 +115,7 @@ public class RewardControllerTest {
     @Test
     public void testGetRewardPerMonthByCustomer() throws Exception {
         Mockito.when(rewardService.getRewardsPerMonthByCustomer(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(rewardPerCustomer));
+                .thenReturn(List.of(rewardPerCustomer));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/reward/rewardPerMonth/1").accept(MediaType.APPLICATION_JSON);
 
@@ -134,7 +133,7 @@ public class RewardControllerTest {
     @Test
     public void testGetTotalReward() throws Exception {
         Mockito.when(rewardService.getTotalRewards())
-                .thenReturn(Arrays.asList(rewardPerCustomerTotal));
+                .thenReturn(List.of(rewardPerCustomerTotal));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/reward/total").accept(MediaType.APPLICATION_JSON);
 
@@ -152,7 +151,7 @@ public class RewardControllerTest {
     @Test
     public void testGetTotalRewardByCustomer() throws Exception {
         Mockito.when(rewardService.getTotalRewardsByCustomer(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(rewardPerCustomerTotal));
+                .thenReturn(List.of(rewardPerCustomerTotal));
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/reward/total/1").accept(MediaType.APPLICATION_JSON);
 

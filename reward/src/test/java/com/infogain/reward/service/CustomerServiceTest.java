@@ -29,7 +29,7 @@ import com.infogain.reward.repository.CustomerRepository;
 public class CustomerServiceTest {
 
     @MockBean
-    private CustomerRepository customerRespository;
+    private CustomerRepository customerRepository;
 
     @Autowired
     private CustomerService customerService;
@@ -50,9 +50,9 @@ public class CustomerServiceTest {
      */
     @Test
     public void testInsertCustomer() {
-        given(customerRespository.saveAndFlush(Mockito.any(Customer.class))).willReturn(mockCustomer);
+        given(customerRepository.saveAndFlush(Mockito.any(Customer.class))).willReturn(mockCustomer);
 
-        Mockito.when(customerRespository.saveAndFlush(Mockito.any(Customer.class)))
+        Mockito.when(customerRepository.saveAndFlush(Mockito.any(Customer.class)))
                 .thenReturn(mockCustomer);
 
         Customer customer = customerService.insertCustomer(mockCustomer);
@@ -64,7 +64,7 @@ public class CustomerServiceTest {
      */
     @Test
     public void testGetAllCustomers() {
-        given(customerRespository.findAll()).willReturn(Arrays.asList(mockCustomer));
+        given(customerRepository.findAll()).willReturn(List.of(mockCustomer));
 
         List<Customer> customers = customerService.getAllCustomers();
 

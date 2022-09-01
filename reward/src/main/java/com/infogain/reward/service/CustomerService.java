@@ -18,13 +18,13 @@ import com.infogain.reward.repository.CustomerRepository;
 public class CustomerService {
 
     @Autowired
-    private CustomerRepository customerRespository;
+    private CustomerRepository customerRepository;
 
     public Customer insertCustomer(Customer customer) {
-        return customerRespository.saveAndFlush(customer);
+        return customerRepository.saveAndFlush(customer);
     }
 
     public List<Customer> getAllCustomers() {
-        return customerRespository.findAll();
+        return customerRepository.findAll();
     }
 }

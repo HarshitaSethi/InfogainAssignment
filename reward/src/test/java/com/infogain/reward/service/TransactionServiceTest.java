@@ -71,7 +71,7 @@ public class TransactionServiceTest {
      */
     @Test
     public void testGetAllTransactions() {
-        Mockito.when(transactionRepository.findAll()).thenReturn(Arrays.asList(mockCustomerTransaction));
+        Mockito.when(transactionRepository.findAll()).thenReturn(List.of(mockCustomerTransaction));
         
         List<CustomerTransaction> transactions = transactionService.getAllTransactions();
         
@@ -85,7 +85,7 @@ public class TransactionServiceTest {
     @Test
     public void testGetAllTransactionsForCustomer() {
         Mockito.when(transactionRepository.findByCustomerId(Mockito.anyLong()))
-                .thenReturn(Arrays.asList(mockCustomerTransaction));
+                .thenReturn(List.of(mockCustomerTransaction));
         
         List<CustomerTransaction> transactions = transactionService.getAllTransactionsForCustomer(1L);
         

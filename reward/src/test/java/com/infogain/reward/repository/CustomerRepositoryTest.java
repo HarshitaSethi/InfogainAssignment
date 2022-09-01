@@ -21,7 +21,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class CustomerRepositoryTest {
 
     @Autowired
-    private CustomerRepository customerRespository;
+    private CustomerRepository customerRepository;
     private Customer mockCustomer;
 
     @BeforeEach
@@ -33,15 +33,15 @@ public class CustomerRepositoryTest {
     @Test
     public void testSaveAndFind() {
 
-        Customer customer = customerRespository.saveAndFlush(mockCustomer);
+        Customer customer = customerRepository.saveAndFlush(mockCustomer);
 
         assertEquals("Customer 101", customer.getCustomerName());
 
-        List<Customer> customers = customerRespository.findAll();
+        List<Customer> customers = customerRepository.findAll();
 
         assertTrue(!customers.isEmpty());
 
-        customerRespository.deleteById(customer.getCustomerId());
+        customerRepository.deleteById(customer.getCustomerId());
     }
 
 }
